@@ -12,7 +12,10 @@ function GetQueryStringParams(sParam,defaultVal) {
     for (var i = 0; i < sURLVariables.length; i++) {
         var sParameterName = sURLVariables[i].split('=');
         if (sParameterName[0] == sParam) {
-            return sParameterName[1];
+            var str = sParameterName[1];
+            str = str.replace('/','').replace('#','')
+            console.log(str)
+            return str;
         }
     }
     return defaultVal;
