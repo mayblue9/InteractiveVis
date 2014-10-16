@@ -14,7 +14,6 @@ function GetQueryStringParams(sParam,defaultVal) {
         if (sParameterName[0] == sParam) {
             var str = sParameterName[1];
             str = str.replace('/','').replace('#','')
-            console.log(str)
             return str;
         }
     }
