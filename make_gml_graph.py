@@ -43,7 +43,7 @@ def convert_to_gml(path,anonymize=False, new_names_file=None,
        print 'and in gdf format (extension .gdf). If you have a file in one of those formats'
        print 'with a different extension, please rename.'
        sys.exit()
-    print_gml_graph(nodes, edges,base + '.gml',edge_attrs)
+    print_gml_graph(nodes, edges, 'facebook.gml',edge_attrs)
     return (nodes, edges)
 
 from collections import Counter
