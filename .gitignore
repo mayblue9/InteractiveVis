@@ -4,3 +4,5 @@
 
 # Ignore files ending with ~ (these are backups from my text editor)
 *~
+*.gdf
+*.gml
