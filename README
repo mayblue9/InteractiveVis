@@ -1,7 +1,19 @@
-InteractiveVis project
+1. Download the code from the repo. Unzip.
 
-The InteractiveVis project of the Oxford Internet Institute with funding by JISC aims to allow easy creation of interactive visualisations for geospatial and network data using native web technologies (HTML5, CSS3, and SVG) and allow these visualisations to be self-contained so that they may run entirely offline in ebooks and other media. The project will survey existing solutions and build the necessary components to fill in missing features and smooth over incompatibilities in between existing libraries. The project will further provide online hosted wizards to allow for the easy creation of these interactive visualizations.
+2. Download your network data from the Facebook API. (apps.facebook.com/netvizz)
+    -'personal network' -> start -> click 'gdf' and Save as...
 
-More information about the project is available on the project blog:
-http//blogs.oii.ox.ac.uk/vis/
+3. Put this data inside the unzipped folder.
 
+4. On command line, go inside the InteractiveVis folder
+
+5. Make script 'setup.sh' executable using: chmod u+x setup.sh
+
+6. Run the GitHub script to install dependencies using: sudo ./setup.sh
+    -This installs numpy, networkx, and pyparsing. It's important that the networkx installed in your Python is version 1.8.1.
+
+7. Run the Python script to load data, detect communities, and layout nodes: python main.py
+
+8. Load up a local server: python -m SimpleHTTPServer
+
+9. On Firefox, go to the address: http://localhost:8000/network/?config=config_fb.json/
